@@ -28,7 +28,6 @@ def load(app):
 
     # Try to parse file contents as YAML
     for loc in locations:
-        print(loc)
         cfg = load_yaml(loc) or load_json(loc)
 
         if cfg:
