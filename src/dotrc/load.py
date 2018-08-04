@@ -1,34 +1,37 @@
-from os.path import expanduser
+import os
 import yaml
 import simplejson as json
 
 def load_yaml(path):
     try:
-        return yaml.load(file(path, 'r'))
-    except:
+        return yaml.load(open(path, 'r'))
+    except (yaml.scanner.ScannerError, IOError):
         return None
 
 def load_json(path):
     try:
-        return json.load(file(path, 'r'))
-    except:
+        return json.load(open(path, 'r'))
+    except IOError:
         return None
 
 def load(app):
     # Result
     config = {}
     # Get user dir path
-    home = expanduser('~')
+    home = os.path.expanduser('~')
 
     # Generate a list of files to check
     locations = [
-        home + '/.config/' + app,
-        '.' + app + 'rc'
+        os.path.join(home, '.config', app),
+        os.path.join(os.getcwd(), '.' + app + 'rc')
     ]
 
     # Try to parse file contents as YAML
     for loc in locations:
+        print(loc)
         cfg = load_yaml(loc) or load_json(loc)
-        config.update(cfg)
+
+        if cfg:
+            config.update(cfg)
 
     return config
