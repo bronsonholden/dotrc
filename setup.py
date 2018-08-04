@@ -9,15 +9,18 @@ setup(
     description='Simple .rc file loading for your Python projects',
     author='Paul Holden',
     author_email='pholden@stria.com',
-    version='0.1.dev3',
+    version='0.1.dev4',
     packages=['dotrc'],
     package_dir={'': 'src'},
     url='https://pypi.org/project/dotrc/',
+    project_urls={
+        'GitHub': 'https://github.com/paulholden2/dotrc'
+    },
     license='MIT',
     install_requires=['PyYAML','simplejson'],
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
-    keywords=
+    keywords='dot rc config file',
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.4",
