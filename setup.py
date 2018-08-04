@@ -9,12 +9,19 @@ setup(
     description='Simple .rc file loading for your Python projects',
     author='Paul Holden',
     author_email='pholden@stria.com',
-    version='0.1dev2',
+    version='0.1.dev3',
     packages=['dotrc'],
     package_dir={'': 'src'},
     url='https://pypi.org/project/dotrc/',
     license='MIT',
     install_requires=['PyYAML','simplejson'],
     long_description=read('README.md'),
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
+    classifiers=(
+        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "License :: OSI Approved :: MIT License",
+    )
 )
