@@ -1,6 +1,8 @@
 dotrc
 =====
 
+[![Build Status](https://travis-ci.org/paulholden2/dotrc.svg?branch=master)](https://travis-ci.org/paulholden2/dotrc)
+
 Simple .rc file loading for your Python projects. Looks for config files
 in typical locations based on your app name:
 
