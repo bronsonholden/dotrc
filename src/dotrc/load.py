@@ -11,7 +11,7 @@ def load_yaml(path):
 def load_json(path):
     try:
         return json.load(open(path, 'r'))
-    except IOError:
+    except (json.errors.JSONDecodeError, IOError):
         return None
 
 def load(app):
