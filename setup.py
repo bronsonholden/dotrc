@@ -9,7 +9,7 @@ setup(
     description='Simple .rc file loading for your Python projects',
     author='Paul Holden',
     author_email='pholden@stria.com',
-    version='0.1',
+    version='0.1.1.dev0',
     packages=['dotrc'],
     package_dir={'': 'src'},
     url='https://pypi.org/project/dotrc/',
