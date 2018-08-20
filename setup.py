@@ -20,7 +20,7 @@ setup(
     install_requires=['PyYAML','simplejson'],
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
-    keywords='dot rc config file',
+    keywords='dot rc config file load .rc configuration',
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.4",
